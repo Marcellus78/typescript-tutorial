@@ -1,25 +1,11 @@
-// const person: {
-//     name: string;
-//     age: number;
-// } 
-var Role;
-(function (Role) {
-    Role[Role["ADMIN"] = 0] = "ADMIN";
-    Role[Role["READ_ONLY"] = 1] = "READ_ONLY";
-    Role[Role["AUTHOR"] = 2] = "AUTHOR";
-})(Role || (Role = {}));
-;
-var person = {
-    name: 'Marcellus',
-    age: 41,
-    hobbies: ['Sports', 'Cooking'],
-    role: Role.AUTHOR
-};
-console.log(person.name);
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
-    console.log(hobby.toUpperCase());
+var input;
+var userName;
+input = 5;
+input = 'Max';
+if (typeof input === 'string') {
+    userName = input;
 }
-if (person.role === Role.AUTHOR) {
-    console.log('is author');
+function throwError(message, code) {
+    throw { message: message, errorCode: code };
 }
+throwError('An error occured', 500);
